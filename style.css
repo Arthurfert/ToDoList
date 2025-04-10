@@ -1,0 +1,150 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: content-box;
+}
+
+body {
+  background: url('background.jpg') no-repeat center fixed; 
+  -webkit-background-size: cover; 
+  background-size: cover;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background-image: linear-gradient(to right, #e5a4cb, #ffe8d4, #ffe8d4, #e5a4cb);
+  background-size: 300% 100%;
+  border-radius: 20px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background-position: 100% 0;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #5e5e5e99;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #2cd54e;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  scale: 175%;
+  font-weight: 500;
+  padding: 12px 16px 12px 16px;
+  transition: transform .4s ease-in-out;
+}
+
+.close:hover {
+  color:rgb(212, 14, 14);
+  transform: rotate(90deg);
+}
+
+/* Style the header */
+.header {
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  font-size: large;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 20px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  min-width: 200px;
+  margin-left: 20px;
+  background-image: linear-gradient(to right, #e5a4cb, #ffe8d4, #ffe8d4, #e5a4cb);
+  background-size: 300% 100%;
+  color: #45062e;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.addBtn:hover {
+  background-position: 100% 0;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
